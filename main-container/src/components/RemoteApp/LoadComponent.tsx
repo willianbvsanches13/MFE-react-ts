@@ -18,10 +18,10 @@ function LoadComponent({ componentPath }: { componentPath: ComponentPath }) {
       if (remoteModule?.default) {
         setMyComponent(() => remoteModule.default);
       } else {
-        console.error("O componente remoto não foi carregado corretamente");
+        console.error("Remote component not found");
       }
     } catch (error) {
-      console.error("Erro ao carregar o componente remoto:", error);
+      console.error("Error loading remote component:", error);
     }
   };
   useEffect(() => {
